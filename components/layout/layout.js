@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Footer from './footer'
 import Navbar from './navbar'
 
-const Layout = ({ children, title = "Quiz App" }) => {
+const Layout = ({ children, title = "Quiz App", name = "" }) => {
     return (
         <div>
             <Head>
@@ -13,7 +13,7 @@ const Layout = ({ children, title = "Quiz App" }) => {
                 <meta name="description" content="quiz app by create md naim" />
             </Head>
             <header style={{ marginBottom: "4rem" }}>
-                <Navbar />
+                <Navbar name={name} />
             </header>
             <div className='hero'>
                 {children}

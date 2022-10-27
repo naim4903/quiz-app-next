@@ -1,9 +1,9 @@
-import { Button, Card, Grid, CardContent, Container, FormControl, InputLabel, Select, MenuItem, Input } from '@mui/material'
+import { Button, Card, Grid, CardContent, Container, FormControl, InputLabel, Select, MenuItem, Input, CardHeader, Typography } from '@mui/material'
 import Layout from '../components/layout/layout';
 import Categories from '../data/category';
 import { useRouter } from "next/router";
 import { useState } from 'react';
-
+import { toast } from 'react-toastify';
 
 export default function Home() {
   const [name, setName] = useState("");
@@ -13,7 +13,20 @@ export default function Home() {
   const router = useRouter();
 
   const handleSubmit = () => {
-    router.push(`/quiz/?name=${name}&catgeory=${category}&type=${type}`)
+    if (!category || !type || !name) {
+      toast.error("plz fill all the fields", {
+        position: "top-right",
+        autoClose: 2500,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    } else {
+      router.push(`/quiz/?name=${name}&catgeory=${category}&type=${type}`);
+    }
   };
 
 
@@ -25,7 +38,7 @@ export default function Home() {
             <Grid container >
               <Grid item xs={12}>
                 <FormControl fullWidth sx={{}} variant="standard" style={{ marginBottom: 10 }}>
-                  <InputLabel htmlFor="outlined-adornment-amount">Name</InputLabel>
+                  <InputLabel htmlFor="outlined-adornment-amount">Enter Your Name</InputLabel>
                   <Input
                     id="outlined-adornment-amount"
                     value={name}
@@ -36,7 +49,7 @@ export default function Home() {
               </Grid>
               <Grid item xs={12}>
                 <FormControl fullWidth variant="standard" style={{ marginBottom: 10 }}>
-                  <InputLabel htmlFor="demo-simple-select-label">Category</InputLabel>
+                  <InputLabel htmlFor="demo-simple-select-label">Select Category</InputLabel>
                   <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
@@ -52,7 +65,7 @@ export default function Home() {
               </Grid>
               <Grid item xs={12} >
                 <FormControl fullWidth variant='standard' style={{ marginBottom: 20 }}>
-                  <InputLabel htmlFor="demo-simple-select-label1">Type</InputLabel>
+                  <InputLabel htmlFor="demo-simple-select-label1">Select Type</InputLabel>
                   <Select
                     labelId="demo-simple-select-label1"
                     id="demo-simple-select"

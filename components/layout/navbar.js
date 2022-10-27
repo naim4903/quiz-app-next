@@ -1,15 +1,16 @@
 import { AppBar, Divider, Toolbar, Typography } from "@mui/material"
 import { useRouter } from "next/router"
 
-const Navbar = () => {
+const Navbar = ({ name = "" }) => {
     const router = useRouter();
     return (
         <>
             <AppBar>
-                <Toolbar variant="dense">
+                <Toolbar variant="dense" style={{ justifyContent: "space-between" }}>
                     <Typography variant="h5" onClick={() => router.replace("/")} style={{ cursor: "pointer" }}>
                         QUIZ APP
                     </Typography>
+                    <Typography>{name}</Typography>
                 </Toolbar>
                 <Divider />
             </AppBar>
