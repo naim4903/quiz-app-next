@@ -75,7 +75,7 @@ const Quiz = () => {
     }
 
     return (
-        <Layout name={name.toUpperCase()}>
+        <Layout name={name}>
             {questions.map((item, i) => (
                 i === questionNumber ?
                     <Grid key={i}>
