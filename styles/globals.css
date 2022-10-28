@@ -28,7 +28,7 @@ a {
 }
 
 .hero {
-  height: 100vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,4 +42,24 @@ a {
 .option {
   padding: .6rem;
   font-size: 1rem;
+}
+
+.correct-answear {
+  background-color: green;
+  color: #ffff;
+}
+
+.correct-answear:hover {
+  background-color: green;
+  color: #ffff;
+}
+
+.wrong-answear {
+  background-color: red;
+  color: #ffff;
+}
+
+.wrong-answear:hover {
+  background-color: red;
+  color: #ffff;
 }
