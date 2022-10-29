@@ -10,7 +10,7 @@ const Navbar = ({ name = "" }) => {
                     <Typography variant="h5" onClick={() => router.replace("/")} style={{ cursor: "pointer" }}>
                         QUIZ APP
                     </Typography>
-                    <Typography>{name}</Typography>
+                    <Typography textTransform="capitalize">{name}</Typography>
                 </Toolbar>
                 <Divider />
             </AppBar>
