@@ -50,16 +50,16 @@ a {
 }
 
 .correct-answear:hover {
-  background-color: green;
-  color: #ffff;
+  background-color: green !important;
+  color: #ffff !important;
 }
 
 .wrong-answear {
-  background-color: red;
+  background-color: red !important;
   color: #ffff;
 }
 
 .wrong-answear:hover {
   background-color: red;
-  color: #ffff;
+  color: #ffff !important;
 }
