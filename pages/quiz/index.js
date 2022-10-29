@@ -66,11 +66,11 @@ const Quiz = () => {
 
     const checkAnsewar = (e, selcetedAnswear, correctAnswear) => {
         if (selcetedAnswear === correctAnswear) {
-            e.currentTarget.classList.add("correct-answear");
+            e.currentTarget.className += " correct-answear";
             setAnswear(answear + 1);
             setSubmited(true);
         } else {
-            e.currentTarget.classList.add("wrong-answear");
+            e.currentTarget.className += " wrong-answear";
             setSubmited(true);
         }
     };
