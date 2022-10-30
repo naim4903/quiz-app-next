@@ -15,7 +15,7 @@ const Quiz = () => {
     const [name, setName] = useState("");
     const [complete, setComplete] = useState(false);
     const [selected, setSelected] = useState("");
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     const router = useRouter();
 
