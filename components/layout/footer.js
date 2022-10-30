@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <div style={{ textAlign: "center" }}>Made by @Md Naim</div>
+        <div style={{ textAlign: "center" }}>© Naim Tarafder</div>
     )
 }
 

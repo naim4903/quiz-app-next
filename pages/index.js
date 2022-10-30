@@ -14,7 +14,7 @@ export default function Home() {
 
   const handleSubmit = () => {
     if (!category || !type || !name) {
-      toast.error("plz fill all the fields", {
+      toast.error("please fill all the fields !", {
         position: "top-right",
         autoClose: 2500,
         hideProgressBar: true,

@@ -33,12 +33,11 @@ h4 {
 }
 
 .hero {
-  height: 97vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: url("../public/img/undraw_books_re_8gea.svg");
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;

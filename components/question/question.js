@@ -1,8 +1,8 @@
 import { Button, Grid } from "@mui/material"
 import { useState, useEffect } from "react"
 
-const Question = ({ questions, correctAns, setScore, score }) => {
-    const [selected, setSelected] = useState(null);
+const Question = ({ questions, correctAns, setScore, score, selected, setSelected }) => {
+    // const [selected, setSelected] = useState(null);
 
     useEffect(() => {
         setSelected(null);

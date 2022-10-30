@@ -1,8 +1,9 @@
+import { CircularProgress } from '@mui/material'
 import Head from 'next/head'
 import Footer from './footer'
 import Navbar from './navbar'
 
-const Layout = ({ children, title = "Quiz App", name = "" }) => {
+const Layout = ({ children, title = "Quiz App", name = "", loading = false }) => {
     return (
         <div>
             <Head>
@@ -16,7 +17,9 @@ const Layout = ({ children, title = "Quiz App", name = "" }) => {
                 <Navbar name={name} />
             </header>
             <div className='hero'>
-                {children}
+                {
+                    loading ? <CircularProgress /> : children
+                }
             </div>
             <footer>
                 <Footer />
