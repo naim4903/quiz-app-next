@@ -12,7 +12,7 @@ const Layout = ({ children, title = "Quiz App", name = "" }) => {
                 <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
                 <meta name="description" content="quiz app by create md naim" />
             </Head>
-            <header style={{ marginBottom: "4rem" }}>
+            <header>
                 <Navbar name={name} />
             </header>
             <div className='hero'>

@@ -28,7 +28,7 @@ a {
 }
 
 .hero {
-  height: 70vh;
+  height: 97vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,9 +45,17 @@ a {
 }
 
 .correct-answear {
-  background-color: green;
-  color: #ffff;
+  background-color: green !important;
+  color: #ffff !important;
 }
+
+button:disabled,
+button[disabled] {
+  border: 1px solid #999999;
+  background-color: orange;
+  color: #666666;
+}
+
 
 .correct-answear:hover {
   background-color: green !important;
@@ -56,10 +64,10 @@ a {
 
 .wrong-answear {
   background-color: red !important;
-  color: #ffff;
+  color: #ffff !important;
 }
 
 .wrong-answear:hover {
-  background-color: red;
+  background-color: red !important;
   color: #ffff !important;
 }
