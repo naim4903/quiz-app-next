@@ -93,9 +93,11 @@ const Quiz = () => {
                             i === questionNumber ?
                                 <Grid key={i}>
                                     <Grid item xs={12} >
-                                        <Card style={{ textAlign: "center", padding: "2rem 3rem 1rem" }}>
+                                        <Card style={{ textAlign: "center", padding: "2rem .6rem 1rem" }}>
                                             <span>{item.category}</span>
-                                            <CardHeader title={i + 1 + ". " + item.question} subheader={`${answear}/10`} />
+                                            {/* <CardHeader title={i + 1 + ". " + item.question} subheader={`${answear}/10`} /> */}
+                                            <h4 style={{ padding: 4, margin: 0 }}>{i + 1 + ". " + item.question}</h4>
+                                            <p style={{}}>{answear}/10</p>
                                             <CardContent>
                                                 <Grid container spacing={2}>
                                                     <Grid item xs={12} md={6}>
